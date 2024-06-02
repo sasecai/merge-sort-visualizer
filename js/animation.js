@@ -1,5 +1,5 @@
-const sideMargin = 20;
-const topMargin = 20;
+const sideMargin = 20; // cat de departe sa fie div-ul fata de cel de sus in stanga sau in dreapta
+const topMargin = 20; // cat de sus sa fie div-ul fata de cel de sus
 let timeout = getTimeout();
 
 /**
@@ -47,6 +47,7 @@ function animateDivision(half, dir) {
  * @param {link tag} target - div.array-element that represents 
  * final location for the first parameter
  */
+// Animeaza de jos in sus cand face interclasarea
 function animateMergeAlgorithmPlacement(element, target) {
     return new Promise(resolve => {
         element.animate({
@@ -71,6 +72,7 @@ function animateMergeAlgorithmPlacement(element, target) {
     });
 }
 
+// await asteapta sa se termine functia respectiva si apoi continua
 /**
  * Merges two sorted halves and replaces target array with the result
  * @param {link tag} arr1 - div.array-container representing first half of target
@@ -121,7 +123,7 @@ async function sort(arr) {
         'left': `${$(arr).position().left - sideMargin}px`,
         'top': `${$(arr).position().top + $(arr).height() + topMargin}px`
     });
-    await animateDivision(half1, '+', topMargin);
+    await animateDivision(half1, '+', topMargin); // animeaza de sus in jos
 
     // Append and animate half 2
     $('section.animation-zone').append(half2);

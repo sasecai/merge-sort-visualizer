@@ -1,0 +1,33 @@
+/* ----------------------------------------------------------------- */
+/* Global */
+/* ----------------------------------------------------------------- */
+body {
+  background: #212326;
+}
+
+main {
+  padding-top: 50px;
+}
+
+/* ----------------------------------------------------------------- */
+/* Animation Zone */
+/* ----------------------------------------------------------------- */
+
+
+section.animation-zone div.array-container {
+  display: inline-flex;
+  position: absolute;
+}
+
+section.animation-zone div.array-container div.array-element {
+  height: 40px;
+  width: 40px;
+  margin: 0 1px 0 1px;
+  background: #5b5b5b;
+  text-align: center;
+  font-weight: bold;
+}
+
+section.animation-zone div.array-container div.array-element p {
+  font-size: 14px;
+}
